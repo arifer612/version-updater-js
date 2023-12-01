@@ -31,7 +31,7 @@ for a Python Poetry =pyproject.toml= file. The =.versionrc.js= file will look li
 * Features
 
 ** Supports
-- [ ] pyproject.toml files
+- [X] [[./updaters/pyproject-updater.js][pyproject.toml files]]
 - [ ] Emacs Lisp package files
 
 ** Compatibility
