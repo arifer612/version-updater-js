@@ -1,0 +1,38 @@
+#+TITLE: Version Updaters
+
+This repository hosts a library of JavaScripts that assist
+[[https://github.com/absolute-version/commit-and-tag-version][~commit-and-tag-version~]] in reading and bumping the metadata and versions files
+of non-NodeJS based projects.
+
+* Usage
+To use this, first, simply either download the relevant updater file or the
+clone the whole repository.
+#+BEGIN_SRC shell
+  git clone https://github.com/arifer612/version-updater-js $XDG_DATA_HOME
+#+END_SRC
+
+Next, direct your =.versionrc.js= (or similar) file to use the script(s) as
+the updater(s). Take for example =pyproject-updater.js= as the updater file
+for a Python Poetry =pyproject.toml= file. The =.versionrc.js= file will look like
+#+begin_src javascript
+  const updaters = process.env.XDG_DATA_HOME + "/version-updater-js/updaters/";
+
+  const pyprojects = {
+    filename: "pyproject.toml",
+    updater: require(updaters + "pyproject-updater.js"),
+  };
+
+  module.exports = {
+    bumpFiles: [pyprojects],
+    packageFiles: [pyprojects],
+  };
+#+end_src
+
+* Features
+
+** Supports
+- [ ] pyproject.toml files
+- [ ] Emacs Lisp package files
+
+** Compatibility
+- [X] [[https://github.com/conventional-changelog/standard-version][~standard-version~]]
