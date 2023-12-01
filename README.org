@@ -1,5 +1,7 @@
 #+TITLE: Version Updaters
 
+[[LICENSE][https://img.shields.io/badge/license-GPL_3-green.svg]]
+
 This repository hosts a library of JavaScripts that assist
 [[https://github.com/absolute-version/commit-and-tag-version][~commit-and-tag-version~]] in reading and bumping the metadata and versions files
 of non-NodeJS based projects.
@@ -36,3 +38,7 @@ for a Python Poetry =pyproject.toml= file. The =.versionrc.js= file will look li
 
 ** Compatibility
 - [X] [[https://github.com/conventional-changelog/standard-version][~standard-version~]]
+
+* LICENSE
+This project is released under the GPL-3 License, which can be read over at
+[[LICENSE][LICENSE]].
